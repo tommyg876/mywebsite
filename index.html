@@ -32,14 +32,23 @@
             margin-bottom: 24px;
         }
 
-        section {
-            margin-bottom: 40px;
-        }
-
         h2 {
             font-size: 1.3rem;
             font-weight: 600;
             margin-bottom: 16px;
+        }
+
+        .bio-list {
+            list-style: decimal;
+            padding-left: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .bio-list li {
+            margin-bottom: 12px;
         }
 
         .project-list,
@@ -88,18 +97,18 @@
 
 <body>
     <div class="container">
-        <h1>Hi, I'm Tommy</h1> <br>
-        <p style="margin-top: -12px; margin-bottom: 32px; line-height: 1.6;">
-            <strong> a little bit about me:</strong><br><br>
-            0. watched <em>Rocky Balboa</em> when I was 6 years old & <em>Creed I</em> is my favourite film of all time. Watched it in NYC when I was 9 years old. Motived me to learn hand-wraps when I was 8, but never boxed.<br>
-            1. Wanted to make the NRL from 5 yo – 14 yo. Played Junior Roosters with some guys playing for the Waratahs at the moment. <br>
-            2. Became a Journalist for company with 30k members at age 14.<br>
-            3. Made 43 Youtube Videos at age 15. Highest one got 1k views. Was a breakup video. Loved GoPros since I was a kid. Bought one at 6yo. Stole $100 from my parents to buy it at Harvey Norman (got caught).<br>
-            4. 99.90 ATAR. Played pre-determined status game. Dedicated 6–9 months of my life to learn self-discipline & rote memorisation.<br>
-            5. Worked in SF @ Superpower. Didn't know what SAAS, VC, EBITDA was before this — still didn't know about EBITDA after ;)<br>
-            6. Ran Website Agency to $1M ARR in 6 months. Learnt sales, marketing. Considered dedicating my life to a hormozi-esque mini-PE empire. Become enraptured with the idea of becoming a billionaire.<br>
-            7. Learning to program ....
-        </p>
+        <h1>Hi, I'm Tommy</h1>
+        <h2>a little bit about me:</h2>
+        <ol class="bio-list">
+            <li> Watched <em>Rocky Balboa</em> when I was 6 years old & <em>Creed I</em> is my favourite film of all time. Watched it in NYC when I was 9. Motivated me to learn hand-wraps at 8, but never boxed.</li>
+            <li> Wanted to make the NRL from 5–14. Played Junior Roosters with some guys playing for the Waratahs at the moment. My wife would probably think this is more masculine than tech biz. </li>
+            <li> Became Journalist for a company with 30k members at age 14.</li>
+            <li> Loved Filmmaking. Made 43 YouTube videos at age 15-16. Highest got 1k views — a breakup video. Loved GoPros since I was a kid. Bought one at 6yo. Stole $100 from my parents to buy it at Harvey Norman (got caught).</li>
+            <li> 99.90 ATAR at age 17. Played the pre-determined status game. Dedicated 6–9 months to self-discipline & rote memorisation.</li>
+            <li> Worked in SF @ Superpower. Didn't know what SAAS, VC, or EBITDA was before — still didn’t know EBITDA after ;)</li>
+            <li> Ran Website Agency to $1M ARR in 6 months. Learned sales, marketing. Considered a Hormozi-style mini-PE empire of Mozi businesse (execution-based). Was enamoured with idea of being a billionaire.</li>
+            <li> Learning to program ...</li>
+        </ol>
 
         <section>
             <h2>Projects</h2>
@@ -112,14 +121,16 @@
                     <span>Project Two</span>
                     <a href="#" class="modern-btn">View</a>
                 </li>
-                <!-- Add more projects as needed -->
             </ul>
         </section>
     </div>
+
     <footer>
         <section>
-            <h2>Writings</h2>
+            <h2><a href="writings.html" style="color: inherit; text-decoration: underline;">Writings</a></h2>
             <ul class="writing-list">
+                <!-- Future writing links go here -->
+            </ul>
         </section>
     </footer>
 </body>
