@@ -15,7 +15,6 @@
             display: flex;
             flex-direction: column;
         }
-
         .container {
             max-width: 700px;
             margin: 40px auto 0 auto;
@@ -24,39 +23,47 @@
             border-radius: 18px;
             box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
         }
-
         h1 {
             font-size: 2.5rem;
             font-weight: 600;
-            margin-bottom: 24px;
+            margin-bottom: 32px;
         }
-
-        p {
-            font-size: 1.1rem;
-            line-height: 1.6;
+        .category {
+            margin-bottom: 32px;
         }
-
-        a {
-            display: inline-block;
-            margin-top: 16px;
+        .category-title {
+            font-size: 1.2rem;
             font-weight: 600;
+            margin-bottom: 12px;
+            color: #222;
+        }
+        .essay-link {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+            line-height: 1.5;
             color: #3366cc;
             text-decoration: none;
-            border-bottom: 2px solid #3366cc;
         }
-
-        a:hover {
+        .essay-link:hover {
             color: #254a9e;
-            border-bottom-color: #254a9e;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Writings</h1>
-        <a href="finance.html">→ why do so many private school kids do finance? </a>
-        <a href="education.html">→ value of education system? </a>
-        <a href="auseconomy.html">→ value of education system? </a>
+        <h1>Some things I find interesting enough to write about ... </h1>
+        
+        <div class="category">
+            <div class="category-title">choosing a path in life</div>
+            <a href="finance.html" class="essay-link">why do so many private school kids do finance?</a>
+            <a href="education.html" class="essay-link">value of education system?</a>
+        </div>
+
+        <div class="category">
+            <div class="category-title">economy</div>
+            <a href="auseconomy.html" class="essay-link">why does australia's economy suck?</a>
+        </div>
     </div>
 </body>
 </html>
