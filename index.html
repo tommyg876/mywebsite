@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Tommy Gregory</title>
@@ -16,107 +15,39 @@
             display: flex;
             flex-direction: column;
         }
-
         .container {
             max-width: 700px;
             margin: 40px auto 0 auto;
-            padding: 32px 24px 0 24px;
+            padding: 32px 24px;
             background: #fff;
             border-radius: 18px;
             box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
         }
-
-        h1 {
-            font-size: 2.5rem;
+        h3 {
+            font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 24px;
         }
-
-        h2 {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 16px;
+        .nav-item {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: #666;
+            text-decoration: none;
         }
-
-        .bio-list {
-            list-style: decimal;
-            padding-left: 20px;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 40px;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .bio-list li {
-            margin-bottom: 12px;
-        }
-
-        .project-list,
-        .writing-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .project-list li,
-        .writing-list li {
-            margin-bottom: 14px;
-        }
-
-        .modern-btn {
-            display: inline-block;
-            padding: 0.7em 1.6em;
-            background: #f5f6fa;
-            color: #222;
-            border: 1.5px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 500;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-            transition: background 0.15s, box-shadow 0.15s, border 0.15s;
-            cursor: pointer;
-            outline: none;
-        }
-
-        .modern-btn:hover,
-        .modern-btn:focus {
-            background: #e9eaf0;
-            border-color: #bdbdbd;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-        }
-
-        footer {
-            margin-top: auto;
-            padding: 32px 0 16px 0;
-            text-align: center;
-            color: #888;
-            font-size: 0.95rem;
+        .nav-item:hover {
+            color: #3366cc;
         }
     </style>
 </head>
-
 <body>
     <div class="container">
-        <h1>Hi, I'm Tommy</h1>
-        <h2>my story (in a romanticized way):</h2>
-        <ol class="bio-list">
-            <li> Watched <em>Rocky Balboa</em> when I was 6 years old. Motivated me to learn hand-wraps at 8. <bold>Creed I</bold> is my favourite film of all time. Watched it in NYC when I was 9.</li>
-            <li> Wanted to make the NRL from 5–14. Played Junior Roosters with some guys currently playing for the Waratahs. Sports is very zero-sum. Therefore, it cultivates competitiveness. Maybe I should've tried to be Isaah Yeo. My wife will probs think it's more masculine than a tech biz.   </li>
-            <li> Loved Reading & Writing. Became Journalist for a company at age 14. Read classics like Picture of Dorian Grey & non-fiction like Why We Sleep & Sapiens. </li>
-            <li> Loved Filmmaking. Made 43 YouTube videos at age 15.5ish (got 1k views on a breakup video) Loved GoPros since I was a kid. Bought one at 6yo & 10yo. Stole $100 from my parents to buy it at Harvey Norman (got caught)</li>
-            <li> 99.90 ATAR at age 17. Played the pre-determined status game. Unintentionally dedicated 6–9 months to self-discipline & rote memorisation.</li>
-            <li> Worked in SF @ Superpower. Didn't know about SAAS, VC, or EBITDA was before — still didn’t know what EBITDA was after ;)</li>
-            <li> Ran Marketing Agency to $1M run-rate in 6 months (technically not quite $1m — but it sounds nice). Learnt about service-businesses: sales & marketing. Listened to 60 Mozi pods in 3 months. Considered devoting myself to a mini-PE empire of Mozi businesses(execution-based). Was enamoured with idea of being a billionaire.</li>
-            <li> Now, learning to program ...</li>
-        </ol>
-    <footer>
-        <section>
-            <h2><a href="projects.html" style="color: inherit; text-decoration: underline;">Coding Projects</a></h2>
-            <h2><a href="writings.html" style="color: inherit; text-decoration: underline;">Writings</a></h2>
-            <h2><a href="https://www.youtube.com/@TommyGregory13/videos" style="color: inherit; text-decoration: underline;">Old Youtube Videos</a></h2>
-            </ul>
-        </section>
-    </footer>
+        <h3>Tommy Gregory</h3>
+        
+        <a href="about.html" class="nav-item">about</a>
+        <a href="projects.html" class="nav-item">projects</a>
+        <a href="writings.html" class="nav-item">writing</a>
+        <a href="https://www.youtube.com/@TommyGregory13/videos" class="nav-item">youtube videos</a>
+    </div>
 </body>
-
 </html>
