@@ -1,44 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Tommy Gregory</title>
   <link href="https://fonts.googleapis.com/css?family=Inter:400,600&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       background: #f5f6fa;
-      font-family: 'Inter', Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
-      color: #222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
     }
 
     .container {
-      max-width: 300px;
-      margin: 100px auto;
       background: #fff;
       padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      text-align: left;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      width: 100%;
+      max-width: 360px;
+    }
+
+    h3 {
+      margin-top: 0;
+      font-size: 18px;
+      font-weight: 600;
     }
 
     input[type="password"] {
-      padding: 10px;
       width: 100%;
-      border-radius: 6px;
+      padding: 12px;
+      font-size: 14px;
+      margin: 12px 0 20px 0;
       border: 1px solid #ccc;
-      margin-bottom: 10px;
+      border-radius: 8px;
     }
 
     button {
       width: 100%;
-      padding: 10px;
-      background: #222;
+      padding: 12px;
+      font-size: 14px;
+      background-color: #222;
       color: #fff;
       border: none;
-      border-radius: 6px;
+      border-radius: 8px;
       cursor: pointer;
+      font-weight: 500;
     }
 
     .hidden {
@@ -46,26 +61,36 @@
     }
 
     a {
-      text-decoration: none;
-      color: #222;
       display: block;
-      margin-bottom: 6px;
+      color: #222;
+      text-decoration: none;
+      margin-bottom: 8px;
+      font-size: 14px;
     }
 
     a:hover {
       text-decoration: underline;
     }
+
+    .title {
+      font-weight: 600;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
   </style>
 </head>
 <body>
+
+  <!-- Login View -->
   <div class="container" id="login-box">
-    <h3>Enter Password</h3>
-    <input type="password" id="passwordInput" placeholder="Password">
+    <div class="title">Enter Password</div>
+    <input type="password" id="passwordInput" placeholder="Password" />
     <button onclick="checkPassword()">Submit</button>
   </div>
 
+  <!-- Hidden Homepage Content -->
   <div class="container hidden" id="real-content">
-    <h3>Tommy Gregory</h3>
+    <div class="title">Tommy Gregory</div>
     <a href="about.html">about</a>
     <a href="projects.html">projects</a>
     <a href="writings.html">writing</a>
@@ -73,7 +98,7 @@
   </div>
 
   <script>
-    const correctPassword = "yourpassword"; // 🔐 CHANGE THIS
+    const correctPassword = "yourpassword"; // CHANGE THIS
 
     function checkPassword() {
       const input = document.getElementById("passwordInput").value;
@@ -85,5 +110,6 @@
       }
     }
   </script>
+
 </body>
 </html>
