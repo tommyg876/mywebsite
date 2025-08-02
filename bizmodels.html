@@ -2,255 +2,237 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Tommy Gregory</title>
+  <title>Business Case Studies</title>
   <link href="https://fonts.googleapis.com/css?family=Inter:400,600&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       background: #f5f6fa;
       font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
+      min-height: 100vh;
       display: flex;
-      align-items: center;
       justify-content: center;
-      height: 100vh;
+      align-items: flex-start;
     }
-
     .container {
       background: #fff;
-      padding: 40px;
+      margin: 40px 0;
+      padding: 32px;
       border-radius: 16px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-      width: 100%;
-      max-width: 360px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      max-width: 800px;
+      width: 98%;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      overflow-y: auto;
     }
-
-    h3 {
-      margin-top: 0;
-      font-size: 18px;
+    header {
+      margin-bottom: 16px;
+    }
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0 0 8px 0;
+    }
+    .intro {
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 16px;
+    }
+    .list {
+      margin-bottom: 16px;
+      font-size: 0.98rem;
+      color: #444;
+    }
+    article.business {
+      padding: 24px;
+      border-radius: 12px;
+      background: #f8f9fb;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .business-title {
+      font-size: 1.25rem;
       font-weight: 600;
-    }
-
-    input[type="password"] {
-      width: 100%;
-      padding: 12px;
-      font-size: 14px;
-      margin: 12px 0 20px 0;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-
-    button {
-      width: 100%;
-      padding: 12px;
-      font-size: 14px;
-      background-color: #222;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: 500;
-    }
-
-    .hidden {
-      display: none;
-    }
-
-    a {
-      display: block;
-      color: #222;
-      text-decoration: none;
       margin-bottom: 8px;
-      font-size: 14px;
+      color: #222;
     }
-
-    a:hover {
-      text-decoration: underline;
+    .section {
+      margin-bottom: 10px;
     }
-
-    .title {
+    .section-title {
+      font-size: 1rem;
       font-weight: 600;
-      font-size: 18px;
-      margin-bottom: 20px;
+      margin-bottom: 4px;
+      color: #444;
+    }
+    .metrics, .highlight, .strategy, .challenges, .content {
+      font-size: 0.98rem;
+      margin-bottom: 6px;
+      color: #555;
+    }
+    .highlight {
+      background: #fff4e5;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-style: italic;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 12px;
+      }
+      article.business {
+        padding: 12px;
+      }
     }
   </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Business Case Studies</h1>
-        <div class="intro">
-            A lot of businesses are not very complex. If you don't have lots of product/services lines, are not creating something new, then there is basically a formula to build your business. This document explains tangible strategies behind different businesses. <br> <br> 
-            Here is a list of other mozi-businesses I've seen over the years:
-            Real estate advisory services, Real estate agent coaching biz, Tattoo coaching biz = helping others scale their biz <br>
-            Beef Chips maker  — ecommerce <br> 
-            Chiropractors, Plumbing/HVAC <br>
-        </div>
-
-        <div class="business">
-            <div class="business-title">Affiliate Marketing Agency</div>
-            
-            <div class="section">
-                <div class="section-title">Growth Timeline</div>
-                <div class="content">Ran one outbound campaign, got 5-8 clients. Said Affiliate Maestro of SAAS org was 'helping'.</div>
-                <div class="metrics">$15-20k/month within 3 months</div>
-            </div>
-
-            <div class="section">
-                <div class="section-title">Team Structure</div>
-                <div class="content">0 employees till $20k/month. Hired Dev to implement N8N flows & partnerships manager to do sales stuff. Fired partnerships person after 2 months.</div>
-            </div>
-
-            <div class="section">
-                <div class="section-title">Business Model</div>
-                <div class="strategy">SAAS companies — finds micro-influencers with relevant audience, DM there, offers them commission deals. Give updates to clients.</div>
-            </div>
-        </div>
-
-        <div class="business">
-            <div class="business-title">Solar Business</div>
-            
-            <div class="section">
-                <div class="section-title">Financial Performance</div>
-                <div class="metrics">$3.5M revenue, $500k EBITDA</div>
-                <div class="content">Ed's friend. Low penetration in central coast. Does all the sales himself. Has 5 installers. Started after Civil Engineering degree.</div>
-            </div>
-
-            <div class="section">
-                <div class="section-title">Scaling Challenges</div>
-                <div class="challenges">Wants to scale but doesn't know how. Has not installed or set up a CRM process so has no idea deal conversion stages, tracking & optimising that.</div>
-                <div class="content">Ed thinks he should hire a lot of sales reps, pump some ads & free himself up.</div>
-            </div>
-
-            <div class="section">
-                <div class="section-title">Industry Insights</div>
-                <div class="highlight">
-                    <strong>Hormozi's View:</strong> Divested from solar business, cashflow business, with no enterprise value because no recurring revenue within the business. Can takeover staff, but no built-in revenue.
-                </div>
-                <div class="content">Energy Maestro thesis: nation-wide solar companies don't really work because the local guy wins. The guy that people know & know is only one call away wins. They looked at doing roll-ups, acquiring other solar businesses but ultimately opted not to do it. Economics didn't make sense.</div>
-                <div class="strategy">Counter-argument: You could always create licensing model with chains in local towns & advertise to them. There are solar companies doing $300-400M in USA as well.</div>
-            </div>
-        </div>
-
-        <div class="business">
-            <div class="business-title">Ecom Supplements Company</div>
-            
-            <div class="section">
-                <div class="section-title">Background</div>
-                <div class="content">Started 5 years ago. Charlie (founder) has experience doing biochemistry degree at Uni & then running creative agency. They wanted to build a supplement company using those marketing skills.</div>
-            </div>
-
-            <div class="section">
-                <div class="section-title">Distribution Strategy</div>
-                <div class="strategy">Found large-distribution retailers as first acquisition methods. Coles, Woolworths & recently closed Priceline as first Pharmacy deal.</div>
-                <div class="content">Since, they tinkered with Meta & had poor results. Have done content which doesn't drive much. Expanded to retail distributors in Vietnam & South-East Asia. Think they could be predominant supplement store in APAC.</div>
-            </div>
-
-            <div class="section">
-                <div class="section-title">Product Focus</div>
-                <div class="metrics">90% of sales come from sleep, hydration & energy</div>
-                <div class="content">All of these already existed & were copied from the US. Mainly target millennial females, not dudes. All marketing is done by female. Female mainly buy fancy supplements like collagen, sleep. No masculine supplements like creatine, protein powder.</div>
-            </div>
-
-            <div class="section">
-                <div class="section-title">Major Challenges</div>
-                <div class="challenges">
-                    <strong>Cash Flow Issues:</strong> Pay manufacturing company upfront. Wait 6 months for them to be made. Coles/Woolworths pay them 6 months later. So, they theoretically could be profitable. But, this means they have to dilute equity, raise debt to grow because payback mechanism is bad.
-                </div>
-                <div class="challenges">
-                    <strong>Lost Distribution:</strong> Lost Coles as major distribution partner. Had 3rd party vendor handling the arrangement. They didn't control it. So, they lost it.
-                </div>
-                <div class="challenges">
-                    <strong>No Customer Data:</strong> Don't get any data from coles/woolworths around who the customer is, demographics, wealth, gender, age etc. So, have no idea how to position the brand.
-                </div>
-            </div>
-        </div>
-
-        <div class="business">
-            <div class="business-title">Ads Agency — Getting to $15k/month in 18 months</div>
-            
-            <div class="section">
-                <div class="section-title">Initial Strategy</div>
-                <div class="content">Cold Called 50-100 times per day until got clients. GMB numbers with iPhone. No automation system. Found home-cleaners & eventually did roofers as well.</div>
-                <div class="strategy">$100M Offer. Don't get paid until they got results. Resulted in extremely high churn at the beginning. No cleaners got great results, so they churned.</div>
-            </div>
-
-            <div class="section">
-                <div class="section-title">Product-Market Fit</div>
-                <div class="content">Started with Residential home cleaners. Pivoted to roofers & found product-market fit. Found the one franchise which did really well. 7 customers & did speaking event from partnership with Shawn. Was booking $1M in contract quotes. Hasn't closed a single deal.</div>
-            </div>
-
-            <div class="section">
-                <div class="section-title">Channel Optimization</div>
-                <div class="highlight">Switched acquisition from cold outreach to paid advertising. Works better. Cold outreach = Unqualified Leads & Josh would really have sell it, meaning Joel had hard time living up to expectations.</div>
-                <div class="metrics">Pricing = $1.5k/month for the whole service not including ad-spend</div>
-            </div>
-        </div>
-
-        <div class="business">
-            <div class="business-title">Grew Accounting Practice from $1M to $2M in 1 year</div>
-            
-            <div class="section">
-                <div class="section-title">Acquisition</div>
-                <div class="content">Rob bought the business from Ray in 2024. Paid $1M for $1M revenue business with ~20-25% profit margins. Earn-out overtime as Ray stays as one of the accountants of the business. Rob put up his house as collateral.</div>
-            </div>
-
-            <div class="section">
-                <div class="section-title">Growth Strategy</div>
-                <div class="metrics">Rob doubled the business in a year</div>
-                <div class="strategy">Spent $3-5k/month on Google Ads. Used agency then fired them. Spends same on Bark leads — affiliate partnership. Tried cold email & paid $10k for the month, only signed 10 customers so stopped the process.</div>
-            </div>
-
-            <div class="section">
-                <div class="section-title">Operations</div>
-                <div class="content">They mainly work on volume & try to bring as many people in as humanly possible. SMB focused. $500-750/month as sweet spot. Extremely productised with no custom work.</div>
-                <div class="strategy">Tries to optimise operations by incorporating AI into their workflows. As well as Zapier automations.</div>
-            </div>
-
-            <div class="section">
-                <div class="section-title">Expansion Opportunity</div>
-                <div class="highlight">
-                    <strong>Roll-up Strategy:</strong> Continue buying accounting businesses & rolling them up onto Proactive. Grow via acquisition. Incredibly fragmented market with 200k+ accounting businesses in Australia. Most are small shops of 1-5 person with no marketing & rely on recurring revenue.
-                </div>
-            </div>
-        </div>
-
-        <div class="business">
-            <div class="business-title">HealthTech Startup in SF</div>
-            
-            <div class="section">
-                <div class="section-title">Funding & Team</div>
-                <div class="metrics">$4M seed before he even had an idea in 2022. Then, raised $30M Series A in March 2025.</div>
-                <div class="content">Jacob ran 2 companies prior (launch-house, commsor) & JP Morgan. Kev built dev-ops tool. Max ran angel-investing syndicate & private community. Initial fund-raising was on Jacob's back.</div>
-                <div class="content">Team = 10-15 growth members, 5 EAs, 10 engineers, 3 founders.</div>
-            </div>
-
-            <div class="section">
-                <div class="section-title">Current Performance</div>
-                <div class="metrics">$500k ARR</div>
-                <div class="challenges">Investor backs space & founders. Most were team, friends & employees. Virtually, no customers that were broadly organic.</div>
-            </div>
-
-            <div class="section">
-                <div class="section-title">Product Offering</div>
-                <div class="strategy">
-                    <strong>Four Main Services:</strong><br>
-                    (1) Marketplace of curated supplements. Buy in-bulk so members get discount versus normal site.<br>
-                    (2) Concierge with AI RAG chatbot & interface connecting with message bird<br>
-                    (3) Blood-test with white-label partner & dashboard showing results<br>
-                    (4) Other white-label diagnostic services like dexa scans, microbiome testing, CGM testing
-                </div>
-            </div>
-
-            <div class="section">
-                <div class="section-title">Operational Challenges</div>
-                <div class="challenges">Had no consistent customer acquisition methods. While had a tonne of content views, don't think they drove sign-ups. 1.2M impressions on X, LI on launch day. Most from Australia. Meta Ads CAC doesn't work because product is too expensive & nebulous.</div>
-                <div class="challenges">Lots of pointless meetings to discuss irrelevant things to hide constraint being lack of engineers. Meeting about cancellation/subscription notice policy. Lots of memos & writing from Max about customer experience messaging, future of healthcare, rx & diagnostic services. Have to find ways of staying busy. Probably doesn't need 3 founders.</div>
-            </div>
-        </div>
+  <div class="container">
+    <header>
+      <h1>Business Case Studies</h1>
+    </header>
+    <div class="intro">
+      Many businesses follow simple models, especially if they aren’t innovating or running multiple product lines. Here’s a collection of real-life business case studies and insights.
     </div>
+    <div class="list">
+      <strong>Other Businesses:</strong> Real estate advisory services, real estate agent coaching, tattoo coaching, beef chips maker (ecommerce), chiropractors, plumbing/HVAC.
+    </div>
+
+    <article class="business">
+      <div class="business-title">Affiliate Marketing Agency</div>
+      <section class="section">
+        <div class="section-title">Growth Timeline</div>
+        <div class="content">One outbound campaign brought 5–8 clients. Claimed support from Affiliate Maestro of a SaaS org.</div>
+        <div class="metrics">Revenue: $15–20k/month within 3 months</div>
+      </section>
+      <section class="section">
+        <div class="section-title">Team Structure</div>
+        <div class="content">No employees until $20k/month. Hired a developer for N8N flows and a partnerships manager (fired after 2 months).</div>
+      </section>
+      <section class="section">
+        <div class="section-title">Business Model</div>
+        <div class="strategy">Finds micro-influencers for SaaS companies, DMs them, offers commission deals, and provides updates to clients.</div>
+      </section>
+    </article>
+
+    <article class="business">
+      <div class="business-title">Solar Business</div>
+      <section class="section">
+        <div class="section-title">Financial Performance</div>
+        <div class="metrics">Revenue: $3.5M, EBITDA: $500k</div>
+        <div class="content">Founded by Ed’s friend after a civil engineering degree. Handles all sales, has 5 installers, low regional penetration.</div>
+      </section>
+      <section class="section">
+        <div class="section-title">Scaling Challenges</div>
+        <div class="challenges">No CRM system; lacks tracking of conversion stages. Wants to scale but unsure how.</div>
+        <div class="content">Suggested: Hire sales reps, run ads, and delegate more.</div>
+      </section>
+      <section class="section">
+        <div class="section-title">Industry Insights</div>
+        <div class="highlight"><strong>Hormozi's View:</strong> Solar is a cashflow business with no enterprise value due to lack of recurring revenue.</div>
+        <div class="content">Nationwide solar companies often lose to local providers who are well-known and easily accessible.</div>
+        <div class="strategy">Possible licensing model for local chains; some US solar companies reach $300–400M revenue.</div>
+      </section>
+    </article>
+
+    <article class="business">
+      <div class="business-title">Ecom Supplements Company</div>
+      <section class="section">
+        <div class="section-title">Background</div>
+        <div class="content">Founded by Charlie, a biochemistry grad and ex-agency owner. Built on copying proven US products, targeting millennial females.</div>
+      </section>
+      <section class="section">
+        <div class="section-title">Distribution Strategy</div>
+        <div class="strategy">Secured large retailers: Coles, Woolworths, Priceline (pharmacy). Expanded to Vietnam and SE Asia.</div>
+        <div class="content">Tried Meta ads with poor results; content creation didn't drive sales.</div>
+      </section>
+      <section class="section">
+        <div class="section-title">Product Focus</div>
+        <div class="metrics">90% of sales: sleep, hydration, energy products.</div>
+        <div class="content">Products are copied and marketed to females; all marketing done by women.</div>
+      </section>
+      <section class="section">
+        <div class="section-title">Major Challenges</div>
+        <div class="challenges"><strong>Cash Flow:</strong> Pay manufacturer upfront, wait 6 months, retailers pay 6 months later.</div>
+        <div class="challenges"><strong>Lost Distribution:</strong> Lost Coles partnership via third-party vendor; lack of control.</div>
+        <div class="challenges"><strong>No Customer Data:</strong> Retailers don’t share customer info, making targeting difficult.</div>
+      </section>
+    </article>
+
+    <article class="business">
+      <div class="business-title">Ads Agency — $15k/month in 18 Months</div>
+      <section class="section">
+        <div class="section-title">Initial Strategy</div>
+        <div class="content">Cold-called 50–100 times/day to get clients. Used GMB numbers and iPhones, no automation.</div>
+        <div class="strategy">$100M Offer model: payment only on results. High initial churn; cleaners didn’t get results.</div>
+      </section>
+      <section class="section">
+        <div class="section-title">Product-Market Fit</div>
+        <div class="content">Started with home cleaners, pivoted to roofers, found success with a franchise and through events.</div>
+      </section>
+      <section class="section">
+        <div class="section-title">Channel Optimization</div>
+        <div class="highlight">Switched from cold calls to paid ads. Cold outreach brought unqualified leads and required hard selling.</div>
+        <div class="metrics">Pricing: $1.5k/month (excluding ad spend)</div>
+      </section>
+    </article>
+
+    <article class="business">
+      <div class="business-title">Accounting Practice Growth: $1M → $2M in 1 Year</div>
+      <section class="section">
+        <div class="section-title">Acquisition</div>
+        <div class="content">Rob bought the business from Ray in 2024: $1M for $1M revenue, 20–25% margins. Ray stayed on for earn-out.</div>
+      </section>
+      <section class="section">
+        <div class="section-title">Growth Strategy</div>
+        <div class="metrics">Doubled revenue in a year</div>
+        <div class="strategy">Spent $3–5k/month on Google Ads and Bark leads. Used and fired agencies; cold email didn’t work.</div>
+      </section>
+      <section class="section">
+        <div class="section-title">Operations</div>
+        <div class="content">High volume approach, SMB focused. Sweet spot: $500–750/month. Productized, little custom work.</div>
+        <div class="strategy">Optimized using AI and Zapier automations.</div>
+      </section>
+      <section class="section">
+        <div class="section-title">Expansion Opportunity</div>
+        <div class="highlight"><strong>Roll-up Strategy:</strong> Acquire and merge accounting practices. Market is fragmented (200K+ firms).</div>
+      </section>
+    </article>
+
+    <article class="business">
+      <div class="business-title">HealthTech Startup (San Francisco)</div>
+      <section class="section">
+        <div class="section-title">Funding & Team</div>
+        <div class="metrics">Raised $4M seed (pre-idea, 2022); $30M Series A (Mar 2025).</div>
+        <div class="content">Founders: Jacob (2 prior companies), Kev (dev-ops tool), Max (angel syndicate/community). Team: 10–15 growth, 5 EAs, 10 engineers, 3 founders.</div>
+      </section>
+      <section class="section">
+        <div class="section-title">Current Performance</div>
+        <div class="metrics">ARR: $500k</div>
+        <div class="challenges">Investors mostly friends/team; not much organic customer traction.</div>
+      </section>
+      <section class="section">
+        <div class="section-title">Product Offering</div>
+        <div class="strategy">
+          <strong>Four Main Services:</strong><br>
+          1. Supplement marketplace (bulk discounts for members)<br>
+          2. Concierge with AI chatbot and interface (Message Bird)<br>
+          3. Blood-test dashboard (white-label partner)<br>
+          4. Other diagnostics: Dexa scans, microbiome, CGM
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-title">Operational Challenges</div>
+        <div class="challenges">No consistent customer acquisition; lots of content views but little conversion.</div>
+        <div class="challenges">Frequent meetings (often off-topic); key constraint: lack of engineers.</div>
+      </section>
+    </article>
+
+  </div>
 </body>
 </html>
