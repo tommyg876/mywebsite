@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Boring Learnings About Building 2 CRM's for 2 Companies in 3 Months</title>
+    <link href="https://fonts.googleapis.com/css?family=Inter:400,600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #f5f6fa;
+            font-family: 'Inter', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #222;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto 0 auto;
+            padding: 40px 32px;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+            margin-bottom: 40px;
+        }
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 32px;
+            color: #222;
+        }
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #222;
+        }
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 32px;
+            margin-bottom: 16px;
+            color: #222;
+        }
+        p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 16px;
+            color: #333;
+        }
+        strong {
+            font-weight: 600;
+            color: #222;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        ul {
+            margin: 16px 0;
+            padding-left: 24px;
+        }
+        li {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #3366cc;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+        .back-link:hover {
+            color: #254a9e;
+        }
+        ol {
+            margin: 16px 0;
+            padding-left: 24px;
+        }
+        ol li {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        em {
+            font-style: italic;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link">← Back to essays</a>
+        
+        <h1>Boring Learnings About Building 2 CRM's for 2 Companies in 3 Months</h1>
+
+        <div class="section">
+            <h2>How to Design the CRM</h2>
+            
+            <ol>
+                <li>CRM Strategy Design — ICP, Workflows, Lifecycle, Pipelines</li>
+                <li>Customising properties within objects</li>
+                <li>Automation & Pipeline Stages</li>
+                <li>Marketing Assets Setup</li>
+                <li>UTM Tracking System</li>
+                <li>Campaign Object System</li>
+                <li>Data, Reporting & Dashboards</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>A CRM Basically Works Like This</h2>
+
+            <h3>1. CRM Strategy Design</h3>
+            
+            <p>Before setting up the CRM, it's a good idea to map out the actual marketing/sales/operations processes associated with the CRM. Basically, all the rest of the steps.</p>
+            
+            <p>Most important things would be:</p>
+            
+            <ul>
+                <li>Mapping out the relevant characteristics of your ICP</li>
+                <li>Mapping objects & custom properties of each object — generally, most places should not</li>
+                <li>Mapping out the pipeline design which includes all of the relevant touch-points for a journey with a customer. For instance, for website design business, it should've looked something like: meeting is booked → second meeting booked → contract/deposit sent → closed Won & then you can also have sections like closed lost + no-show to 1st meeting + no-show to 2nd meeting</li>
+                <li>Finally, it's good to map the lifecycle of each contact e.g. the relevant attributes & properties needed to become lead → MQL → SQL</li>
+            </ul>
+
+            <h3>2. Customising Properties within Objects</h3>
+            
+            <p>You have a bunch of objects which are equivalent to different sheets in an Airtable or a Google Sheet. Then, within each object you have a list of attributes which are equivalent to the columns within each of the objects. Then, you put data in each of these attributes and you have that be the actual data for each of the customers.</p>
+            
+            <p>So, the first thing to define for any CRM is what objects do you want to have. For a website business, you might have: deals, contacts, leads, clients, support-tickets. But, for an energy installation business, you might also add meter, battery, site, finance partner & partner. This is the base that then determines how you set up the rest of your system.</p>
+            
+            <p><em>An interesting point here is to never use free text. Instead, always use boolean or dropdown text. This allows for better tracking & better analytics reporting because you can see which statistics are related to which dropdowns.</em></p>
+            
+            <p>The goal of objects is to fill as much relevant data as possible so that people can understand the client profile, collect data around sales timelines, close %, different % of touch-points. All objects are relational meaning that one deal is linked to their contact, company, meter, asset finance partner etc. This allows you to map different data from different objects against one another.</p>
+
+            <h3>3. Workflow Stages</h3>
+            
+            <p>You create pipelines to manage companies going through the pipeline. Sales reps typically do this manually and will move people through different stages e.g. to qualify as a lead, to sign the deal, energy installation onboarding & customer support tickets. A big part of sales reps day is just updating the CRM, ensuring deals are in the right stages, ensuring contacts have the right data & enrolling contacts in sequences to then fulfil your daily activities.</p>
+            
+            <p>To move candidates across the pipeline, you generally have two options:</p>
+            
+            <p><strong>(1)</strong> Have exit criteria & automation workflows running in the background. Here, you also create automatic tasks in the background for reps to check in on deals & make appropriate actions from that.</p>
+            <p><strong>(2)</strong> Manually moving deals across the pipeline.</p>
+            
+            <p>Option 1 is generally more attractive.</p>
+            
+            <p>To collect this data, you typically try to collect as much from the initial lead-capture. You run a landing page & collect data. However, these days clay.com, clearbit are the best tools to achieve this! With clay, you can run an automated sequence every-day, or you can have a webhook every time a new contact is created. From there, you use various agents to research and fill in the data for all the relevant fields that you need to fill in. This saves sales reps time, ensures the data is clean & can be used effectively. You also use dropdown over free text because it allows you to filter by leads. You also collect data by making it mandatory when moving between stages.</p>
+            
+            <p>From here, you generally have workflows to automate all the necessary steps to try and take as much as possible. So, you have automations when a person enters a sequence to enrol them in a potential sequence, update their record, add them to a certain list, have agents scrape certain data. Though, most of them revolve around email sequences where previously you had to send basically the same email. Now, you can have settings where "If contact becomes qualified lead" then enter them in email nurture sequence.</p>
+            
+            <p>You have different workflows which basically consist of various automations that work on an if/then basis for all potential leads/contacts. So, for leads + deals + sites + install ops + billing, certain actions like data being missing, delays in pipeline progression, if stage progresses then create object.</p>
+            
+            <p>Typical sequences include: cold outbound, warm-lead from ads + white-paper + lead magnet, no-show to discovery, no-show to close-call, post proposal-meeting, logging back into the software, haven't signed contract for a long time, onboarding, customer education throughout product experience.</p>
+
+            <h3>4. Marketing Assets Setup</h3>
+            
+            <p>HubSpot & CRMs typically have both marketing & sales functionality.</p>
+            
+            <p>The marketing section is comprised of campaigns & assets. Each campaign has a tonne of assets from which it can view analytics for. The purpose of a campaign is to aggregate all the data for a particular geography, time period, product, service etc</p>
+            
+            <p>For example, if Cable Energy was to push an initial marketing campaign comprised of 2 email marketing campaigns, SMS campaign, Meta ads, Google PPC, Social Content for a launch on August 15th. Then, they would be able to track all of them in one spot.</p>
+            
+            <p>Generally, the most common assets used are:</p>
+            
+            <ul>
+                <li><strong>Email /SMS Marketing:</strong> Templates created in Hubspot/Mailchimp. People often use the actual Hubspot email builder, using images, keeping CTA above the fold.</li>
+                <li><strong>Meta/Google Ads:</strong> Track attribution here</li>
+                <li><strong>Content:</strong> Meta/LinkedIn content</li>
+                <li><strong>Event Campaigns:</strong> speaking events & can log members etc</li>
+            </ul>
+
+            <h3>5. UTM Tracking System</h3>
+            
+            <p>Generally, people track attribution via UTM codes i.e. in every CTA on each ad, landing page, email template, content post, you embed a tracking URL called UTM_code = PPC, UTM_code = campaign34 & that allows you to track sessions for that particular campaign.</p>
+            
+            <p>For example, in an email marketing campaign, you'll have UTM codes in every CTA button & different ones at different points on the page. You'll also have different UTM tracking codes on different landing pages.</p>
+
+            <h3>6. Dashboard & Reporting</h3>
+            
+            <p>Finally, the purpose of the CRM is that it allows you to track all the metrics associated with sales in an easy way. This allows managers to assess KPIs that they're working towards like and optimise against them.</p>
+            
+            <p>For example, some key volume stats are number of leads generated → number of discovery calls → number of close calls → number of offers presented → contracts signed → payments made. All those touch-points are potential leakages & you can conversion-rate optimise every part of that funnel. The CRM allows you to do that. Also, can track things like what % of leads came from where, CAC, LTV, time to install.</p>
+            
+            <p>To control the CRM, you'll have different people managing different parts of the pipeline. For example, sales reps will manage the pipeline flow, customer support the onboarding flow, SDRs the leads.</p>
+        </div>
+    </div>
+</body>
+</html>
