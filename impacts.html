@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>How AI Works: From Neural Networks to Modern Scaling</title>
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #f5f6fa;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .container {
+      background: #fff;
+      margin: 40px 0;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      max-width: 800px;
+      width: 98%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      overflow-y: auto;
+    }
+    header {
+      margin-bottom: 8px;
+    }
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0 0 8px 0;
+    }
+    .intro {
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 8px;
+    }
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 20px 0 8px 0;
+      color: #222;
+    }
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 16px 0 8px 0;
+      color: #444;
+    }
+    p {
+      font-size: 0.98rem;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+    em {
+      font-style: italic;
+      color: #666;
+    }
+    strong {
+      font-weight: 600;
+      color: #333;
+    }
+    .highlight {
+      background: #fff4e5;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-style: italic;
+      margin: 12px 0;
+    }
+    ul {
+      margin: 12px 0;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 8px;
+      color: #555;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>How AI Works: From Neural Networks to Modern Scaling</h1>
+      <p class="intro">A comprehensive exploration of artificial intelligence fundamentals, from neural network architecture to the supply chain powering today's AI revolution.</p>
+    </header>
+
+    <h2>Additional Questions to Ponder</h2>
+    
+    <p><em>How do data centres work? What innovation will happen here?</em></p>
+    
+    <p><em>How does NVIDIA actually work? How do GPUs work?</em></p>
+    
+    <p><em>Why is parallel processing important etc? How does it work? How does reasoning within the models work? COT Prompting? What has happened with this recently?</em></p>
+    
+    <p><em>How will eval frameworks evolve over time?</em></p>
+    
+    <p><em>How do scaling laws actually work? Training vs Inference compute & latency?</em></p>
+    
+    <p><em>How does the data collection process actually work? What goes on behind the scenes?</em></p>
+
+    <h2>Introduction</h2>
+    
+    <p>AI has been around for a long time. Dates back to the 1950s and before. While it seems the technology was invented in 2023, and certainly much of discourse has proliferated following it. It is already integrated much into society today. Excel monkeys use ML algorithms in their 100 hour weeks, Amazon/Netflix/Social media recommends your feed based on your past history amongst others. It blew up in 2023 because ChatGPT 3.5 was the first consumer app that people could tangibly use as an all-encompassing chatbot. The general public only believes things when they can see it, use it, interact with it. Until then, it's random noise in esoteric arXiv blog posts.</p>
+
+    <h2>The GPT Evolution</h2>
+    
+    <p>Part of the excitement around AI is due to the rapid improvements. In 2020, GPT-2 was atrocious. Would not pass as a pre-schooler. The words in the sentences did not actually make sense. 2023 & GPT-3 was an average high-schooler. Now, GPT o3 is nearly PHD level across basically all fields. Math is basically a solved domain. In just 5 years, this has been the progress. Plus, funding is increasing at an increasing rate right now. More budget for compute, top-tier AI researchers the like.</p>
+    
+    <p>All the hype is on AI benchmarks. The improvement in scores for things like Humanity's final exam, Coding Benchmarks on SWE tests etc. This is cool. However, how effective this is, I'm not too sure. They are static tasks. It's almost akin to how high-school tests are correlated with intelligence & work ethic. Hence. why they are valuable. But, converting intelligence to messy, real-world tasks in a workplace environment that is beneficial for the economy is a different kettle of fish. Hence, evaluation frameworks will need to shift & adapt to ACI: artificial capable intelligence; a measurement of the effectiveness of agentic workflows.</p>
+
+    <h2>Supply Chain & Each Part of Them</h2>
+    
+    <p><strong>TMSC:</strong> Company in Taiwan. Fabricators costs $20-30BN. Huge MOAT. Labour hard to come by; Taiwanese people run to office even in Earthquake. Paid $80k for graduates. 70 hrs in factory each week. Hard for US to hire talent for this type of company. Manufacture the chips for NVIDIA based on their designs. It's the first part of the supply chain.</p>
+    
+    <p><strong>NVIDIA:</strong> Designs the H100s, A100s & all the rest of the chips. Does not manufacture them. Just designs the file & gives the file to TMSC.</p>
+    
+    <p><strong>Foundational Models:</strong> ChatGPT, Claude, Gemini, Grok & Deepseek. Probably ChatGPT, Grok & Claude are the real people in race. Chat dominates 95% of user activity. Most of $$$ might come from agents and API usage. Therefore, it matters more what businesses use not consumers over long-term.</p>
+    
+    <p><strong>Application-Layers:</strong> Lots of hollow wrappers at the moment. But, also huge companies like Clay, Harvey, Hebbia, Cohere, Heidi Health. Bunch of YC-Funded companies. Huge valuations for some & ones that have risen and fell like Jasper after people realise it's a very basic UI/UX with extremely basic fine-tuning where you may as well use the model.</p>
+
+    <h2>Brief History of AI</h2>
+    
+    <ul>
+      <li>1936 = Turing Test made as dominant question in field. When a human and machine become indistinguishable we have reached AGI.</li>
+      <li>50-80s: researchers turn away from Deep Learning</li>
+      <li>90s & Early 2000s: Not really much. Rise of ML & Deep Learning</li>
+      <li>2012: Hinton, Ilya Sutskever = AlexNet. 10x improvement on image recognition using deep neural networks.</li>
+      <li>2010: DeepMind founded. AlphaGo solved in 2016. Huge win for community, problem was thought to be impossible. Alphafold problem solved by them.</li>
+      <li>2017: OpenAI Founded. GPT 3.5 released in 2023. Surge of AI proliferated.</li>
+      <li>2025: Reasoning Models have come out … Application level agents are here.</li>
+    </ul>
+
+    <h2>Neural Networks Explained</h2>
+    
+    <p>There has been a major shift in AI; from deterministic, largely predictive systems to deeper, more general systems. Within AI, you have Symbolic AI & Statistical AI. Early on, symbolic AI was dominant. It largely involves deterministic, hard-coded logic. Obviously this could not scale or be hyper useful. A hard-coded python script can only do so much & we can only make so many off them against the infinite combinations of problems to solve. Statistical AI is more about pattern-matching & recognition. Within this, you have Machine Learning which revolves around giving machines data through supervised learning (input → output), unsupervised learning (clusters). The important subset of ML currently is deep learning; the major paradigm of training the powerful neural nets of today. Here, you have all the various neural networks for vision, image, text, speech etc</p>
+    
+    <p>A neural network mimics the human brain. It is a probability machine that attempts to map a set of inputs to the probability of it's outputs. It is matter up of an entry layer (input data), hidden layers in the middle (tokenisation process) then the output layer which outputs the various probabilities of the next token. Very basic neural networks are just logistic regression/linear regression where you build a formula to guess X based on past inputs. You have some initial set of data, it becomes tokenised down into a set of tokens that the model can interpret. It goes through various layers as it continues to tokenise the various pieces of data. Then, it gives you the probability of it's output. For instance, if you input a chunk of text it will tokenise the text into it's various tokens — subcomponents of words — before it predicts the next token following that. For verifiable domains, there is only one answer so it makes it easier to judge the validity of, but for subjective domains like writing you use techniques like RLHF to judge the validity of the next token. The same process occurs for images with the original image being tokenised into various sub-parts, and then into various edges, straight lines and then you get the probability in terms of colours ranging from 0 → 1.</p>
+    
+    <p>To optimise the algorithm, you are trying to minimise the loss function via backpropagation. Following the calculation of the next token probabilities, you try and optimise the weights of each parameter to increase the probability of the "correct" token, while minimising the probability of the other tokens. They do this through the loss function, which uses some derivative to calculate the difference between the probabilities and where they should be. From here, you take another derivative to find the gradient descent function. This is the 4D map where you find the quickest path to the bottom which allows you to optimise the loss function as efficiently as possible.</p>
+
+    <h2>Pre-Training & Post-Training</h2>
+    
+    <p>Models rely on having consumed tonnes and tonnes of quality, digestible data. It would take a human that read 8 hrs per day, 2.3 millions year to read the whole internet. That is the process of pre-training. Through sites like Common Crawl, ChatGPT & other LLMs are essentially trained on the whole internet of text. Much of compute is for training runs. These have increased 2.6x YOY for the last 5-7 years and are a significant reason for the improving capabilities of LLMs. It is said that pre-training a model is almost like a human skimming text; you could intuit the main message & summarise it without recalling intricate details about the model.</p>
+    
+    <p>However, the fact users have started to enjoy using the models is due to the post-training techniques. Some of important techniques are RLHF, RLVR, RL, MOE, Tool-Use</p>
+    
+    <p><strong>RLHF</strong> = Humans & Data Annotators labelling great, good & bad responses. From there, you rank them & the weights adapt accordingly. Great for subjective fields like writing, imagery.</p>
+    
+    <p><strong>RLVR</strong> = Give model tough coding & math questions. Give it an answer. There is a verifiable reward that it can use.</p>
+    
+    <p><strong>RL</strong> = Reinforcement Learning as a whole, training the model to adapt it's weights based on feedback.</p>
+    
+    <p><strong>MOE</strong> = mixture of experts; DeepSeek uses just 8/256 parameters of the neural network, improving inference efficiency.</p>
+    
+    <p><strong>Tool-Use</strong> = Integrating things like search, memory & other integration apps.</p>
+    
+    <p>Essentially, the models are huge next token predictors. However, they are powerful because of their architecture, the sheer amount of data they are trained on, and their computing power which we will cover next.</p>
+
+    <h2>How Models Have Scaled</h2>
+    
+    <p>In order of importance, the models have grown because of (1) Increasing the amount of compute as per 2022 scaling laws (2) increasing the amount of pre-training data (3) algorithmic efficiencies like MOE & transformer architecture</p>
+
+    <h3>1. Increasing Amount of Compute</h3>
+    
+    <p>Counterintuitively, most of the gains from ML has not been the research but simply by building bigger centres. Hence, this is why NVIDIA is most valuable company in the world. Compute has grown 4.6x every year. Azure has made more money than ever from it's data centres. OpenAI has started to build it's own data centres in Abilene, Texas & the UAE. XAI built memphis cluster in 122 days that cost between $5-10BN.</p>
+    
+    <p>These compute clusters are going to increase to hundreds of billions over time. Stargate is supposed to cost around $500BN, with $100BN already invested. This is based on 2022 paper: Scaling Laws. This posited that model effectiveness is product of parameters, data & compute. Therefore, by throwing more compute at the problem, the models continue to improve & get better.</p>
+
+    <h3>2. Pre-Training Data</h3>
+    
+    <p>2022 paper also stated that you need to have 20 tokens for every parameter. GPT-3 simply didn't have enough data. So, by increasing the amount of pre-training data every year by 2.6x, you allow each parameter to be more effective. Sadly, this will be covered in bottlenecks because there is a limit to digital data because there is only so much text on the internet as well.</p>
+    
+    <p>But, essentially, by feeding the model more data, it can produce more complex, thoughtful answers</p>
+
+    <h3>3. Algorithmic Efficiencies</h3>
+    
+    <p>2017 Transformer Paper was a seminal one made by Google. Came up with a new architecture for the models. Critically, it involved attention layer & multi-layer perceptrons.</p>
+    
+    <p>Attention layers allow the model to gain context over the other tokens that are being processed in a sentence. Similar to the human brain, we don't view words in isolation, but rather as part of the overall group that they come in. The same word can draw different meanings in different contexts, while each word makes other words more impactful. It does this through vector embeddings where on a 4d plane, tokens are assigned a certain location in space & the model learns to map it to other vectors/tokens in space & then assigns it a relationship.</p>
+    
+    <p>Multi-layer perceptrons are how tokens are passed between layers. Allows tokens to be shared/transferred across the various layers of the system.</p>
+    
+    <p>This was over 20% of algorithmic efficiencies. Others have been smaller ones like MOE where DeepSeek created a model that only uses 8 of 256 total parameters creating a model that can use the compute more efficiently.</p>
+
+    <h3>4. Reinforcement Learning</h3>
+    
+    <p>This is not necessarily making the algorithms more efficient, and it is not related to the pre-training data itself so it deserves a separate topic entirely.</p>
+  </div>
+</body>
+</html>
